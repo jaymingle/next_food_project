@@ -2,12 +2,13 @@ import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import logoImg from '@/assets/logo.png'
+import
 
 const MainHeader = () => {
     return (
         <header>
             <Link href='/'>
-                <Image src={`${logoImg}`} alt='The Logo'/>
+                <Image src={logoImg} alt='The Logo' full/>
                 My Food App
             </Link>
 
