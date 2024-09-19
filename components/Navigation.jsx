@@ -4,10 +4,10 @@ import Link from "next/link";
 const Navigation = () => {
     return (
         <nav>
-            <ul>
+            <ul style={{display: 'flex', gap: 10, color: '#fff'}}>
                 <Link href='/'>Home</Link>
                 <Link href='/meals'>Meals</Link>
-                <Lin href='/share'>Share</Link>
+                <Link href='meals/share'>Share</Link>
                 <Link href='/community'>Community</Link>
             </ul>
         </nav>
