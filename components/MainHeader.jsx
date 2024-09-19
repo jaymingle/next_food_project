@@ -1,25 +1,26 @@
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
+
 import logoImg from '@/assets/logo.png'
-import
+import classes from "./main-header.module.css"
 
 const MainHeader = () => {
     return (
-        <header>
-            <Link href='/'>
-                <Image src={logoImg} alt='The Logo' full/>
+        <header className={classes.header}>
+            <Link className={classes.logo} href='/'>
+                <Image src={logoImg}  alt='The Logo' priority/>
                 My Food App
             </Link>
 
 
-            <nav>
+            <nav className={classes.nav}>
                 <ul>
                     <li>
-                        <Link href='/meals'>Meals</Link>
+                        <Link href='/meals'>Select Meals</Link>
                     </li>
                     <li>
-                        <Link href='/community'>Community</Link>
+                        <Link href='/community'>Explore Community</Link>
                     </li>
                 </ul>
             </nav>
