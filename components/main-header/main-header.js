@@ -11,7 +11,7 @@ const MainHeader = () => {
         <>
             <MainHeaderBackground/>
             <header className={classes.header}>
-                <Link className={classes.logo} href='/public'>
+                <Link className={classes.logo} href='/'>
                     <Image src={logoImg} alt='The Logo' priority/>
                     My Food App
                 </Link>
