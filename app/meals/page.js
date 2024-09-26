@@ -1,18 +1,19 @@
 import Link from "next/link";
+import classes from './page.module.css'
 
-const Meals = () => {
+const MealsPage = () => {
     return (
-        <main>
-            <h1>Meals Page</h1>
-
-            <Link href='meals/1'>Meal 1</Link>
-            <Link href='meals/2'>Meal 2</Link>
-            <Link href='meals/3'>Meal 3</Link>
-            <Link href='meals/4'>Meal 4</Link>
-            <Link href='meals/5'>Meal 5</Link>
-
-        </main>
+        <>
+            <header className={classes.header}>
+                <h1>Delicious meals, made {' '} for you <span className={classes.highlight}>with love</span> </h1>
+                <p>Prepare your recipe and let us prepare it for you. Healthy and fast!</p>
+                <p className={classes.cta}>
+                    <Link href="/meals/share">Share Your Meals</Link>
+                </p>
+            </header>
+            <main className={classes.main}></main>
+        </>
     )
 }
 
-export default Meals;
+export default MealsPage;
