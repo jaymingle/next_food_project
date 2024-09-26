@@ -1,10 +1,19 @@
+"use client"
+
 import React from 'react';
+import Link from "next/link";
+import {usePathname} from "next/navigation";
 
-const NavLink = () => {
+import classes from "./nav-link.module.css"
+
+const NavLink = ({href, children}) => {
+
+    const path = usePathname()
+
     return (
-        <nav>
-
-        </nav>
+        <Link href={`/${href}`} className={path.startsWith(`/${href}`) ? classes.active : undefined}>
+            {children}
+        </Link>
     );
 };
 

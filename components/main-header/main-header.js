@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
@@ -7,11 +5,9 @@ import Image from "next/image";
 import logoImg from '@/assets/logo.png'
 import classes from "./main-header.module.css"
 import MainHeaderBackground from "@/components/main-header/main-header-background";
-import {usePathname} from "next/navigation";
+import NavLink from "@/components/main-header/nav-link";
 
 const MainHeader = () => {
-
-    const path = usePathname()
 
     return (
         <>
@@ -24,15 +20,19 @@ const MainHeader = () => {
 
 
                 <nav className={classes.nav}>
+
                     <ul>
-                        <li>
-                            <Link href='/meals'  className={path.startsWith('/meals') ? classes.active : undefined}>Select Meals</Link>
-                        </li>
-                        <li>
-                            <Link href='/community' className={path.startsWith('/community') ? classes.active : undefined}>Explore Community</Link>
-                        </li>
+                        <NavLink href={'meals'}>Meals</NavLink>
+                        <NavLink href={'community'}>Community</NavLink>
+                        {/*<li>*/}
+                        {/*    <Link href='/meals'  className={path.startsWith('/meals') ? classes.active : undefined}>Select Meals</Link>*/}
+                        {/*</li>*/}
+                        {/*<li>*/}
+                        {/*    <Link href='/community' className={path.startsWith('/community') ? classes.active : undefined}>Explore Community</Link>*/}
+                        {/*</li>*/}
                     </ul>
                 </nav>
+
             </header>
         </>
 
